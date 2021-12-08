@@ -1,18 +1,18 @@
 require './lib/bike'
 
 class DockingStation
-    def initialize(bike)
-        @bike = bike
-    end
+    # def initialize
+    #     @bike = Bike.new
+    # end
     
     def release_bike
-        @bike.working?
+        Bike.new
     end
 
-    def print
-        p @bike.is_a? (Bike)
-        p @bike
-    end
+    # def print
+    #     p @bike.is_a? (Bike)
+    #     p @bike
+    # end
 end
 
 # TEST!!

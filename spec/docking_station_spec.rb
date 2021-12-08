@@ -1,9 +1,10 @@
 require 'docking_station'
+require 'bike'
 
 # This is working !
 # describe 'bike' do
-#   let (:bike) {DockingStation.release_bike}
-#   it { is_expected.to respond_to(:working?) }
+#     let (:bike) {DockingStation.release_bike}
+#     it { is_expected.to respond_to(:working?) }
 # end
 
 describe DockingStation do
