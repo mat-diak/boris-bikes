@@ -5,4 +5,13 @@ describe DockingStation do
     #     expect(DockingStation).to respond_to(release_bike)
     # end
     it { is_expected.to respond_to(:release_bike) }
+    
+    bike = DockingStation.release_bike
+    expect(bike).to respond_to(:working?)
 end
+
+# describe DockingStation.release_bike do
+#     it { is_expected.to respond_to(:working?) }
+# end
+
+
