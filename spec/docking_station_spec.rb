@@ -1,28 +1,35 @@
 require 'docking_station'
 
-# This is working !
-# describe bike do
-#     let (:bike) {DockingStation.release_bike}
-#     it { is_expected.to respond_to(:working?) }
-# end
-
-# Write failing test
-# Try if DockingStation responds to dock_bike
-
 describe DockingStation do
   it { is_expected.to respond_to(:release_bike) }
-    # update unit test so they match output needed for feature test
-end
-
-describe DockingStation do
-  it "docks somthing" do
-  Bike.new
   it { is_expected.to respond_to(:dock_bike) }
 end
+
+#test for: each time DockingStation.new; make sure it creates an array
+# DockingStation.dock_bike(bike)
+describe DockingStation do
+   it 'returns bike to dock' do
+    #Arrange
+    bike = Bike.new
+    docking_station = DockingStation.new
+    #Act
+    action = docking_station.dock_bike(bike)
+    #Assert
+    expect(action).to eq "docked"
+  end
+  
+end
+
 
 describe DockingStation.new.release_bike do
   it { is_expected.to respond_to(:working?) }
 end
 
-# update the test for dock
-# we to return the bike we dock
+# describe DockingStation do
+#   it 'returns docked bikes' do
+#
+#     bike = Bike.new
+#     subject.dock(bike)
+#     expect(subject.bike).to eq bike
+#   end
+# end
