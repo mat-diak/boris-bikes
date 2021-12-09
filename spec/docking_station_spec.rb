@@ -8,26 +8,16 @@ end
 # creating to store bikes in the dock
 describe DockingStation do
   it "Check if dock attribute is created" do
-  # Arrange 
-  create and instance of docking DockingStation
-  # Act
-  # Assert
-  check to make sure array was created
+  docking_station = DockingStation.new
+  expect(docking_station.dock).to eq []
   end
 end
 
-
-
-#test for: each time DockingStation.new; make sure it creates an array
-# DockingStation.dock_bike(bike)
 describe DockingStation do
    it 'returns bike to dock' do
-    #Arrange
     bike = Bike.new
     docking_station = DockingStation.new
-    #Act
     action = docking_station.dock_bike(bike)
-    #Assert
     expect(action).to eq "docked"
   end
   
@@ -38,11 +28,14 @@ describe DockingStation.new.release_bike do
   it { is_expected.to respond_to(:working?) }
 end
 
-# describe DockingStation do
-#   it 'returns docked bikes' do
-#
-#     bike = Bike.new
-#     subject.dock(bike)
-#     expect(subject.bike).to eq bike
-#   end
-# end
+# GOAL - write a test to check whether error is raised when there is no bikes
+describe DockingStation do
+  #ARRANGE
+  # Create an instance of DockingStation.new 
+  docking_station = DockingStation.new
+  #ACT
+  act = docking_station.release_bike
+
+  #ASSERT
+  expect(act).to raise_error("no bike available")
+end
