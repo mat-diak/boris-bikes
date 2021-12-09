@@ -5,6 +5,19 @@ describe DockingStation do
   it { is_expected.to respond_to(:dock_bike) }
 end
 
+# creating to store bikes in the dock
+describe DockingStation do
+  it "Check if dock attribute is created" do
+  # Arrange 
+  create and instance of docking DockingStation
+  # Act
+  # Assert
+  check to make sure array was created
+  end
+end
+
+
+
 #test for: each time DockingStation.new; make sure it creates an array
 # DockingStation.dock_bike(bike)
 describe DockingStation do

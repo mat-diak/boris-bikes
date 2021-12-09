@@ -1,12 +1,16 @@
 require './lib/bike'
 
 class DockingStation
+    # def initialize 
+    #     @dock = []
+    # end
     def release_bike
         Bike.new
     end
 
     def dock_bike(bike)
         "docked"
+    # set n attribute on an instantiated object eg bike using the @ instance variable
     end
 end
 
