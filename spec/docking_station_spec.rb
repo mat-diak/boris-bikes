@@ -6,13 +6,16 @@ describe DockingStation do
 
   let(:docking_station) { DockingStation.new } # docking_station = DockingStation.new
   let(:bike) { docking_station.release_bike } # bike = docking_station.release_bike
-  let(:return_bike) { docking_station.dock_bike(bike) }
+  let(:return_bike) { docking_station.dock_bike(bike) } # return_bike = docking_station.dock_bike
   
   it "should create a dock attribute with an empty array at startup" do
   expect(docking_station.dock).to eq []
   end
 
-  it 'checks if bike is returned' do
+  it 'there is bikes available; checks if bike is returned' do
+    # It doesn't give bike because dock empty
+    # Arrangement
+    docking_station.dock << Bike.new
     return_bike
     expect(docking_station.dock.empty?).to be false 
   end
