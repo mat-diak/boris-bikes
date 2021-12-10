@@ -13,10 +13,7 @@ describe DockingStation do
   end
 
   it 'there is bikes available; checks if bike is returned' do
-    # It doesn't give bike because dock empty
-    # Arrangement
     docking_station.dock << Bike.new
-    return_bike
     expect(docking_station.dock.empty?).to be false 
   end
 
