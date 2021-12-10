@@ -21,3 +21,18 @@ describe DockingStation do
     expect(bike).to be_working
   end
 end
+
+# There are no bikes in the docking station. We want our code to produce an error,
+# when using the release_bike method.
+
+We want an error to occur when we release a bike. 
+ it 'throws an error message when we release a bike'
+  expect { docking_station.release_bike }.to raise_error("There are no bikes available")
+end 
+
+# Arrange
+
+# Act
+
+# Assert
+
