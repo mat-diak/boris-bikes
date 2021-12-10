@@ -9,8 +9,6 @@ class DockingStation
     end
 
     def release_bike
-        # If there are no bikes we want an error
-        # else produce bike
         if @dock.empty? 
             raise "There are no bikes available" 
         else
@@ -22,7 +20,3 @@ class DockingStation
         @dock << bike
     end
 end
-
-# Use the fail or raise keyword to raise an exception in your code
-
-# Lets raise an error
